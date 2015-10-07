@@ -1,2 +1,6 @@
-<h1>Quiz#answer</h1>
-<p>Find me in app/views/quiz/answer.html.erb</p>
+<h1><%= @question[:title]%></h1>
+<% @question[:answers].each do |answer| %>
+	<%= content_tag(:a, class: "btn btn-default", href: "/quiz/answer?id=#{@id}&answer=#{@question[:answers].index(answer)}") do %>
+		<%= answer[:title] %>
+	<% end %>
+<% end %>
