@@ -1,8 +1,11 @@
 QuizChain::Application.routes.draw do
+  get "login/login_post"
   get "quiz/login"
   get "quiz/answer"
   get "quiz/finish"
+  post "quiz/login_post"
   root "quiz#login"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
