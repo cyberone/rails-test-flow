@@ -1,2 +1,19 @@
-<h1>Quiz#finish</h1>
-<p>Find me in app/views/quiz/finish.html.erb</p>
+<h1>Quiz finished</h1>
+Congratulations. You completed the quiz.<br />
+Due to security reasons I removed email sending from the application. Just left the stat on the finish page. You are free to send it yourself. 
+<table class="table">
+	<thead>
+		<tr>
+			<th>Question</th>
+			<th>Result</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @answers.each do |answer| %>
+			<tr>
+				<td><%= answer[:id] %></td>
+				<td><%= answer[:correct] %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table> 
